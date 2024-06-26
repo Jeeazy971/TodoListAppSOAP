@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListAppSOAP.Server", "TodoListAppSOAP.Server\TodoListAppSOAP.Server.csproj", "{30C3F43E-14E6-4940-A683-AEF939B7606A}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "soapclient", "soapClient\soapclient.esproj", "{04D62648-FFC7-4DE4-93C8-94857CD327CB}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "todolistappsoap.client", "TodoListAppSOAP.Client\todolistappsoap.client.esproj", "{F2751B1C-9EB6-4A6F-9242-5C0B0C300226}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +17,12 @@ Global
 		{30C3F43E-14E6-4940-A683-AEF939B7606A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30C3F43E-14E6-4940-A683-AEF939B7606A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30C3F43E-14E6-4940-A683-AEF939B7606A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04D62648-FFC7-4DE4-93C8-94857CD327CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04D62648-FFC7-4DE4-93C8-94857CD327CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04D62648-FFC7-4DE4-93C8-94857CD327CB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{04D62648-FFC7-4DE4-93C8-94857CD327CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04D62648-FFC7-4DE4-93C8-94857CD327CB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04D62648-FFC7-4DE4-93C8-94857CD327CB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F2751B1C-9EB6-4A6F-9242-5C0B0C300226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2751B1C-9EB6-4A6F-9242-5C0B0C300226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2751B1C-9EB6-4A6F-9242-5C0B0C300226}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F2751B1C-9EB6-4A6F-9242-5C0B0C300226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2751B1C-9EB6-4A6F-9242-5C0B0C300226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2751B1C-9EB6-4A6F-9242-5C0B0C300226}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

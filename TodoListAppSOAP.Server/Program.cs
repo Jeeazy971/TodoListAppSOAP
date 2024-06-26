@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using SoapCore;
 using TodoListAppSOAP.Server.Data;
-using TodoListAppSOAP.Server.Services;
 using TodoListAppSOAP.Server.Repositories;
+using TodoListAppSOAP.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,13 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Ajouter les services SOAP
+builder.Services.AddScoped<IToDoSoapService, ToDoSoapService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 // Ajouter les repositories
 builder.Services.AddScoped<IToDoItemRepository, ToDoItemRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
-// Ajouter les services SOAP
-builder.Services.AddScoped<IToDoSoapService, ToDoSoapService>();
-builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddSoapCore();
 
 // Ajouter les contrôleurs (si vous avez également des API REST)
