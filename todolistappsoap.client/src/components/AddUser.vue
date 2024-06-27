@@ -43,7 +43,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/UserService.svc',
+                        'https://localhost:32770/UserService.svc',
                         soapRequest,
                         {
                             headers: {
@@ -54,7 +54,7 @@
                     );
 
                     console.log(response.data);
-                    this.$router.push('/'); // Rediriger vers la page d'accueil après l'ajout
+                    this.$router.push('/');
                 } catch (error) {
                     console.error(error);
                     this.error = "L'ajout de l'utilisateur n'est pas disponible pour le moment. Veuillez réessayer plus tard.";

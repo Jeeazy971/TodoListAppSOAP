@@ -43,7 +43,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/UserService.svc',
+                        'https://localhost:32770/UserService.svc',
                         soapRequest,
                         {
                             headers: {
@@ -86,7 +86,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/UserService.svc',
+                        'https://localhost:32770/UserService.svc',
                         soapRequest,
                         {
                             headers: {
@@ -97,7 +97,7 @@
                     );
 
                     console.log(response.data);
-                    this.$router.push('/'); // Rediriger vers la page d'accueil après la mise à jour
+                    this.$router.push('/');
                 } catch (error) {
                     console.error(error);
                     this.error = "La mise à jour de l'utilisateur n'est pas disponible pour le moment. Veuillez réessayer plus tard.";
@@ -106,7 +106,3 @@
         },
     });
 </script>
-
-<style scoped>
-    /* Ajoutez votre style ici */
-</style>

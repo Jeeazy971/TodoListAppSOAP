@@ -42,7 +42,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/UserService.svc',
+                        'https://localhost:32770/UserService.svc',
                         soapRequest,
                         {
                             headers: {
@@ -83,7 +83,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/UserService.svc',
+                        'https://localhost:32770/UserService.svc',
                         soapRequest,
                         {
                             headers: {
@@ -94,7 +94,7 @@
                     );
 
                     console.log(response.data);
-                    this.getUsers(); // Refresh the list after deletion
+                    this.getUsers();
                 } catch (error) {
                     console.error(error);
                     this.error = "La suppression de l'utilisateur n'est pas disponible pour le moment. Veuillez réessayer plus tard.";
@@ -103,7 +103,3 @@
         },
     });
 </script>
-
-<style scoped>
-    /* Ajoutez votre style ici */
-</style>

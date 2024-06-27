@@ -53,7 +53,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/Service.svc',
+                        'https://localhost:32770/Service.svc',
                         soapRequest,
                         {
                             headers: {
@@ -105,7 +105,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/Service.svc',
+                        'https://localhost:32770/Service.svc',
                         soapRequest,
                         {
                             headers: {

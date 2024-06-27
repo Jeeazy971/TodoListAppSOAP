@@ -56,7 +56,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/UserService.svc',
+                        'https://localhost:32770/UserService.svc',
                         soapRequest,
                         {
                             headers: {
@@ -95,7 +95,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/Service.svc',
+                        'https://localhost:32770/Service.svc',
                         soapRequest,
                         {
                             headers: {
@@ -145,7 +145,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/Service.svc',
+                        'https://localhost:32770/Service.svc',
                         soapRequest,
                         {
                             headers: {
@@ -170,7 +170,6 @@
 </script>
 
 <style scoped>
-    /* Ajustez le style pour le toggle switch */
     .form-check-input {
         width: auto;
         height: auto;

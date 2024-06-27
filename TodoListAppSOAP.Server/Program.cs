@@ -6,7 +6,6 @@ using TodoListAppSOAP.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Ajouter Entity Framework et configurer la base de données
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -20,7 +19,6 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddSoapCore();
 
-// Ajouter les contrôleurs (si vous avez également des API REST)
 builder.Services.AddControllers();
 
 // Configurer CORS pour autoriser toutes les origines
@@ -44,7 +42,7 @@ using (var scope = app.Services.CreateScope())
     DbInitializer.Initialize(context);
 }
 
-// Configurer le middleware de l'application.
+// Le middleware de l'application.
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -55,7 +53,7 @@ else
     app.UseHsts();
 }
 
-// Middleware pour journaliser les requêtes et réponses SOAP
+// Middleware pour logger les requêtes et réponses SOAP
 app.Use(async (context, next) =>
 {
     context.Request.EnableBuffering();
@@ -84,11 +82,10 @@ app.UseRouting();
 app.UseCors("AllowAllOrigins");
 app.UseAuthorization();
 
-// Configurer les points de terminaison SOAP
+// les points de terminaison SOAP
 app.UseSoapEndpoint<IToDoSoapService>("/Service.svc", new SoapEncoderOptions());
 app.UseSoapEndpoint<IUserService>("/UserService.svc", new SoapEncoderOptions());
 
-// Utiliser les contrôleurs si vous en avez
 app.MapControllers();
 
 app.Run();

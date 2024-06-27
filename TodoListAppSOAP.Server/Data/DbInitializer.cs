@@ -8,10 +8,9 @@ namespace TodoListAppSOAP.Server.Data
         {
             context.Database.EnsureCreated();
 
-            // Vérifiez si des utilisateurs existent déjà
             if (context.Users.Any())
             {
-                return; // La base de données a déjà été initialisée
+                return; 
             }
 
             var users = new User[]

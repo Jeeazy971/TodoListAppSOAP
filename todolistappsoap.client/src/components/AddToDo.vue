@@ -55,7 +55,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/UserService.svc',
+                        'https://localhost:32770/UserService.svc',
                         soapRequest,
                         {
                             headers: {
@@ -104,7 +104,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32768/Service.svc',
+                        'https://localhost:32770/Service.svc',
                         soapRequest,
                         {
                             headers: {
@@ -115,7 +115,7 @@
                     );
 
                     console.log(response.data);
-                    this.$router.push('/'); // Rediriger vers la page d'accueil après l'ajout
+                    this.$router.push('/'); 
                 } catch (error) {
                     console.error(error);
                     this.error =
@@ -125,7 +125,3 @@
         },
     });
 </script>
-
-<style scoped>
-    /* Ajoutez votre style ici */
-</style>
