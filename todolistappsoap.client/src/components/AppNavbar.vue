@@ -4,16 +4,16 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <router-link to="/" class="nav-link">Home</router-link>
+                    <router-link to="/" class="nav-link">Accueil</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/add" class="nav-link">Add ToDo</router-link>
+                    <router-link to="/add-todo" class="nav-link">Ajouter une tache</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/users" class="nav-link">Users</router-link>
+                    <router-link to="/users" class="nav-link">Utilisateurs</router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link to="/add-user" class="nav-link">Add User</router-link>
+                    <router-link to="/add-user" class="nav-link">Ajouter un utilisateur</router-link>
                 </li>
             </ul>
         </div>

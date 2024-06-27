@@ -17,11 +17,10 @@
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" v-model="isCompleted" id="isCompleted" />
-                <label class="form-check-label" for="isCompleted">Complété</label>
             </div>
             <button type="submit" class="btn btn-primary">Modifier</button>
         </form>
-        <button @click="goBack" class="btn btn-secondary mt-2">Retour</button>
+        <button @click="goBack" class="btn btn-danger mt-2">Retour</button>
     </div>
 </template>
 
@@ -57,7 +56,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32770/UserService.svc',
+                        'https://localhost:32768/UserService.svc',
                         soapRequest,
                         {
                             headers: {
@@ -96,7 +95,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32770/Service.svc',
+                        'https://localhost:32768/Service.svc',
                         soapRequest,
                         {
                             headers: {
@@ -146,7 +145,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32770/Service.svc',
+                        'https://localhost:32768/Service.svc',
                         soapRequest,
                         {
                             headers: {

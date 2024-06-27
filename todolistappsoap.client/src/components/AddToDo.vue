@@ -1,3 +1,29 @@
+<template>
+    <div class="container mt-5">
+        <h2>Ajouter une tâche</h2>
+        <div v-if="error" class="alert alert-danger">{{ error }}</div>
+        <form @submit.prevent="addToDoItem">
+            <div class="form-group">
+                <label for="title">Titre</label>
+                <input v-model="title"
+                       type="text"
+                       class="form-control"
+                       id="title"
+                       required />
+            </div>
+            <div class="form-group">
+                <label for="user">Utilisateur</label>
+                <select v-model="userId" class="form-control" id="user" required>
+                    <option v-for="user in users" :key="user.Id" :value="user.Id">
+                        {{ user.Name }}
+                    </option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+    </div>
+</template>
+
 <script lang="ts">
     import { defineComponent } from 'vue';
     import axios from 'axios';
@@ -29,7 +55,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32770/UserService.svc',
+                        'https://localhost:32768/UserService.svc',
                         soapRequest,
                         {
                             headers: {
@@ -78,7 +104,7 @@
 
                 try {
                     const response = await axios.post(
-                        'https://localhost:32770/Service.svc',
+                        'https://localhost:32768/Service.svc',
                         soapRequest,
                         {
                             headers: {
@@ -99,3 +125,7 @@
         },
     });
 </script>
+
+<style scoped>
+    /* Ajoutez votre style ici */
+</style>
